@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent E and Long Vowels</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .word-pair {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .word {
+            margin: 0 20px;
+            font-size: 2em;
+        }
+        .sound-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .sound-button:hover {
+            background-color: #3e8e41;
+        }
+        .image {
+            max-width: 150px;
+            height: auto;
+            margin-left: 20px;
+            margin-right:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Silent E and Long Vowel Sounds</h1>
+
+    <p>When a word ends with a silent "e," the vowel in the middle usually says its long sound.</p>
+
+    <div class="word-pair">
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=CAP" alt="Cap" class="image"> <br> cap
+        </div>
+        <button class="sound-button" onclick="playSound('cap')">🔊</button>
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=CAPE" alt="Cape" class="image"> <br> cape
+        </div>
+        <button class="sound-button" onclick="playSound('cape')">🔊</button>
+    </div>
+
+    <div class="word-pair">
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=KIT" alt="Kit" class="image"> <br> kit
+        </div>
+        <button class="sound-button" onclick="playSound('kit')">🔊</button>
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=KITE" alt="Kite" class="image"> <br> kite
+        </div>
+        <button class="sound-button" onclick="playSound('kite')">🔊</button>
+    </div>
+
+    <div class="word-pair">
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=HOP" alt="Hop" class="image"> <br> hop
+        </div>
+        <button class="sound-button" onclick="playSound('hop')">🔊</button>
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=HOPE" alt="Hope" class="image"> <br> hope
+        </div>
+        <button class="sound-button" onclick="playSound('hope')">🔊</button>
+    </div>
+
+    <div class="word-pair">
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=TUB" alt="Tub" class="image"> <br> tub
+        </div>
+        <button class="sound-button" onclick="playSound('tub')">🔊</button>
+        <div class="word">
+            <img src="https://via.placeholder.com/150/87CEEB/000000?text=TUBE" alt="Tube" class="image"> <br> tube
+        </div>
+        <button class="sound-button" onclick="playSound('tube')">🔊</button>
+    </div>
+
+    <script>
+        function playSound(word) {
+            const audio = new Audio(`sounds/${word}.mp3`); // Ensure you have audio files in a 'sounds' folder
+            audio.play();
+        }
+    </script>
+</body>
+</html>
